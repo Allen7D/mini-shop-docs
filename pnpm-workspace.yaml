@@ -1,5 +1,8 @@
 # pnpm 11 配置节点安装方式（注意：pnpm 11 将 hoist 相关配置从 .npmrc 迁移到本文件）
 # mermaid 的间接依赖(dayjs/cytoscape/braintree-sanitize-url 等)是 CJS/UMD，
 # Vite dev 需解析到顶层 node_modules，故用扁平链接 + 全量提升
+packages:
+  - '.'
+
 nodeLinker: hoisted
 shamefullyHoist: true
