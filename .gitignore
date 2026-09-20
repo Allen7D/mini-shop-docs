@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# VitePress 构建/缓存目录
+docs/.vitepress/cache

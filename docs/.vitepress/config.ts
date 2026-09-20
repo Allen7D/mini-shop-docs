@@ -13,6 +13,20 @@ export default withMermaid({
   // 忽略指向 localhost 的本地服务链接（如 Swagger 文档地址）
   ignoreDeadLinks: [/^https?:\/\/localhost/],
 
+  // 修复 dev 模式白屏：mermaid 的间接依赖(dayjs/sanitize-url/cytoscape等)以 CJS/UMD 的 main 导出，
+  // Vite dev 下浏览器原生 import 拿不到 default 导致 SyntaxError。
+  // 官方解法：alias 指到 ESM 入口 + 纳入预构建
+  vite: {
+    optimizeDeps: {
+      include: ['@braintree/sanitize-url'],
+    },
+    resolve: {
+      alias: {
+        dayjs: 'dayjs/',
+      },
+    },
+  },
+
   // 侧边栏 / 导航结构
   themeConfig: {
     // 顶部导航
