@@ -44,10 +44,6 @@ def framework_error(e):
 
 在业务代码里只要 `raise ParameterException(msg='xxx')` 或直接 `return Success(data)`，剩下的交顶层统一处理。这就是**面向切面**：把「异常处理」这个横切关注点从业务里抽走。
 
-::: tip 前端类比
-这就像给 axios 写了一个全局 response 拦截器——所有接口的返回体先走统一逻辑，`error_code === 0` 就是成功，否则按错误码提示用户。
-:::
-
 ## Success 的小花活
 
 ```python

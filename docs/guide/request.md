@@ -22,17 +22,6 @@ Redprint + Blueprint 命中 `app/api/v1/order.py` 的 `get_order_list`
 ### ⑥ 统一返回（Success）
 `return Success(paged_orders)` → 固定格式 JSON：`{error_code, msg, data}`
 
-## 每一层在前端对应什么
-
-| 后端层 | 代码位置 | 前端对应物 |
-|---|---|---|
-| ① 路由 | `api/v1/order.py` | 路由表 |
-| ② 认证 | `@auth.login_required` | 路由守卫 / 拦截器 |
-| ③ 校验 | `validators/forms.py` | 表单校验库（zod/joi） |
-| ④ 业务 | `service/order.py` | 业务 store / use case |
-| ⑤ 数据 | `dao/order.py` → `models/order.py` | API 请求层 / Model |
-| ⑥ 返回 | `core/error.py` 的 `Success` | 统一 response 拦截器 |
-
 ## 「壳」是怎么叠出来的？—— 装饰器
 
 ```python

@@ -24,7 +24,7 @@ class Redprint:
             bp.add_url_rule(url_prefix + rule, endpoint, f, **options)
 ```
 
-前端类比：蓝图 ≈ 一个 React Router 的 `<Route>` 集合；红图 ≈ **一个组件（Component）**。组件先在各自地方写好，再决定挂在哪、给谁用。
+红图先在各自地方写好路由，再决定挂到哪个蓝图、给谁用。
 
 ## 接口文件怎么用红图
 

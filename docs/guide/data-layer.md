@@ -1,13 +1,13 @@
 # 数据层 Model / DAO
 
-前端开发者最关心的「数据怎么读写」。这里用 SQLAlchemy（ORM）操作 MySQL，再把查询封装成 DAO 方法。
+这里用 SQLAlchemy（ORM）操作 MySQL，再把查询封装成 DAO 方法。
 
 ## 分层：Model 定义表，DAO 封装查询
 
-| 角色 | 文件 | 职责 | 前端类比 |
-|---|---|---|---|
-| `models/` | `models/order.py` 等 | 定义每张「表」的结构（列、类型、关系） | TypeScript interface / schema |
-| `dao/` | `dao/order.py` 等 | 封装具体查询方法（按用户查、分页查…） | API 请求层 / repository |
+| 角色 | 文件 | 职责 |
+|---|---|---|
+| `models/` | `models/order.py` 等 | 定义每张「表」的结构（列、类型、关系） |
+| `dao/` | `dao/order.py` 等 | 封装具体查询方法（按用户查、分页查…） |
 
 ## 一个 Model 长什么样
 

@@ -12,13 +12,13 @@
 
 ## 技术栈
 
-| 技术 | 在项目里干什么 | 前端类比 |
-|---|---|---|
-| **Flask 2.0** | Python 的 Web 框架，接收 HTTP 请求 | Express / Koa |
-| **SQLAlchemy** | ORM，把「查数据库」写成 Python 对象 | Prisma / TypeORM |
-| **flasgger / Swagger** | 自动生成接口文档 | Swagger / OpenAPI |
-| **WTForms** | 校验请求参数是否合法 | joi / zod |
-| **uv** | Python 依赖安装 / 打包部署 | pnpm / npm |
+| 技术 | 在项目里干什么 |
+|---|---|
+| **Flask 2.0** | Python 的 Web 框架，接收 HTTP 请求 |
+| **SQLAlchemy** | ORM，把「查数据库」写成 Python 对象操作 |
+| **flasgger / Swagger** | 自动生成接口文档 |
+| **WTForms** | 校验请求参数是否合法 |
+| **uv** | Python 依赖安装 / 打包部署 |
 
 ## 核心思想
 

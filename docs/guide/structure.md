@@ -4,18 +4,18 @@
 
 ## 核心目录一览
 
-| 目录 | 职责 | 前端类比 | 通俗解释 |
-|---|---|---|---|
-| `app/api/v1` | C 端接口（小程序用户） | Controller | 用户端的路由：查商品、下单、支付 |
-| `app/api/cms` | B 端接口（后台管理） | 另一个 Controller | 管理端的路由：管用户、管商品、管权限 |
-| `app/validators` | 参数校验 | 表单校验 / zod | 进来的参数先「体检」，不对就拦下 |
-| `app/service` | 业务逻辑 | service / store | 下单、支付、登录这些「真业务」 |
-| `app/dao` | 数据访问封装 | API 封装层 | 把常见查询封装成方法，service 调用 |
-| `app/models` | ORM 模型 | Model / 表结构 | 定义了每张数据库表长什么样 |
-| `app/core` | 框架核心 | 基建 / 工具库 | 红图、错误、db、token、swagger 都在这里 |
-| `app/libs` | 错误码 / 枚举 | 常量 / utils | 错误码表、通用小工具 |
-| `app/extensions` | 扩展封装 | plugin 封装 | swagger、flask-admin 等 |
-| `app/config` | 配置 | env 配置 | 密钥、列表配置等 |
+| 目录 | 职责 | 通俗解释 |
+|---|---|---|
+| `app/api/v1` | C 端接口（小程序用户） | 用户端的路由：查商品、下单、支付 |
+| `app/api/cms` | B 端接口（后台管理） | 管理端的路由：管用户、管商品、管权限 |
+| `app/validators` | 参数校验 | 进来的参数先「体检」，不对就拦下 |
+| `app/service` | 业务逻辑 | 下单、支付、登录这些「真业务」 |
+| `app/dao` | 数据访问封装 | 把常见查询封装成方法，service 调用 |
+| `app/models` | ORM 模型 | 定义了每张数据库表长什么样 |
+| `app/core` | 框架核心 | 红图、错误、db、token、swagger 都在这里 |
+| `app/libs` | 错误码 / 枚举 | 错误码表、通用小工具 |
+| `app/extensions` | 扩展封装 | swagger、flask-admin 等 |
+| `app/config` | 配置 | 密钥、列表配置等 |
 
 ## 为什么分 v1 和 cms 两套？
 
@@ -41,7 +41,7 @@ def create_app():
 ```
 
 ::: tip 区分方法
-前端开发者最容易在 `app/libs` 和 `app/core` 之间犯晕。`libs` 是「与框架无关的工具」（错误码、枚举、http 工具），`core` 是「和 Flask 强绑定的核心」（db 连接、认证、红图、异常）。
+现在的确容易在 `app/libs` 和 `app/core` 之间犯晕。`libs` 是「与框架无关的工具」（错误码、枚举、http 工具），`core` 是「和 Flask 强绑定的核心」（db 连接、认证、红图、异常）。
 :::
 
 下一步：[核心·红图 Redprint](/guide/redprint)
