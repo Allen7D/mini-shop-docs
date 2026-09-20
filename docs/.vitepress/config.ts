@@ -18,6 +18,7 @@ export default defineConfig({
     nav: [
       { text: '入门指南', link: '/guide/' },
       { text: '架构', link: '/guide/architecture' },
+      { text: '软件工程启示', link: '/engineering' },
       { text: 'API 参考', link: '/api/' },
       { text: 'GitHub', link: 'https://github.com/Allen7D/mini-shop-server' },
     ],
@@ -41,8 +42,15 @@ export default defineConfig({
             { text: '数据层 Model / DAO', link: '/guide/data-layer' },
             { text: '实战拆解·下单流程', link: '/guide/case-order' },
             { text: '动手·添加新接口', link: '/guide/practice' },
-            { text: '软件工程启示', link: '/guide/engineering' },
             { text: '下一步怎么学', link: '/guide/next' },
+          ],
+        },
+      ],
+      '/': [
+        {
+          text: '软件工程启示',
+          items: [
+            { text: '软件工程启示', link: '/engineering' },
           ],
         },
       ],
