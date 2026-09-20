@@ -1,6 +1,6 @@
 # 数据层 Model / DAO
 
-这里用 SQLAlchemy（ORM）操作 MySQL，再把查询封装成 DAO 方法。
+这里用 SQLAlchemy（ORM）操作 PostgreSQL，再把查询封装成 DAO 方法。
 
 ## 分层：Model 定义表，DAO 封装查询
 
@@ -45,7 +45,7 @@ dao 层（数据访问）—— 用 SQLAlchemy 查数据，封装成语义方法
     ↓
 models 层（ORM 模型）—— 定义表和字段
     ↓
-MySQL 数据库 —— 真实存储
+PostgreSQL 数据库 —— 真实存储
 ```
 
 ::: tip 为什么中间要隔一层 DAO？

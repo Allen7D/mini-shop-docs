@@ -7,7 +7,7 @@
 **mini-shop-server** 是给「微信小程序商城」提供数据接口的后端服务。它不写页面，只负责：接收小程序的请求 → 校验、查数据库 → 把 JSON 数据返回。
 
 ```
-📱 微信小程序（前端）→ ⚙️ mini-shop-server（本后端）→ 🗄️ MySQL 数据库
+📱 微信小程序（前端）→ ⚙️ mini-shop-server（本后端）→ 🗄️ PostgreSQL 数据库
 ```
 
 ## 技术栈
@@ -16,6 +16,7 @@
 |---|---|
 | **Flask 2.0** | Python 的 Web 框架，接收 HTTP 请求 |
 | **SQLAlchemy** | ORM，把「查数据库」写成 Python 对象操作 |
+| **PostgreSQL** | 关系型数据库，真实存储数据 |
 | **flasgger / Swagger** | 自动生成接口文档 |
 | **WTForms** | 校验请求参数是否合法 |
 | **uv** | Python 依赖安装 / 打包部署 |
