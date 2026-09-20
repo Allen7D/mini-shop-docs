@@ -29,6 +29,26 @@ export default withMermaid({
 
   // 侧边栏 / 导航结构
   themeConfig: {
+    // 本地搜索（minisearch，纯前端，中文友好）
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索', buttonAriaLabel: '搜索' },
+          modal: {
+            displayDetails: '显示详细信息',
+            resetButtonTitle: '重置',
+            noResultsText: '没有找到相关内容',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+            },
+          },
+        },
+      },
+    },
+
     // 顶部导航
     nav: [
       { text: '入门指南', link: '/guide/' },
