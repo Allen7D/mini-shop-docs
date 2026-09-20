@@ -34,6 +34,7 @@ export default withMermaid({
       { text: '入门指南', link: '/guide/' },
       { text: '软件工程启示', link: '/guide/engineering' },
       { text: 'API 参考', link: '/api/' },
+      { text: '部署篇', link: '/deploy/' },
       { text: 'GitHub', link: 'https://github.com/Allen7D/mini-shop-server' },
     ],
 
@@ -83,6 +84,14 @@ export default withMermaid({
             { text: '总览', link: '/api/' },
             { text: 'C 端接口 (v1)', link: '/api/v1' },
             { text: 'B 端接口 (cms)', link: '/api/cms' },
+          ],
+        },
+      ],
+      '/deploy/': [
+        {
+          text: '部署篇',
+          items: [
+            { text: '服务器部署（Nginx + Gunicorn）', link: '/deploy/' },
           ],
         },
       ],

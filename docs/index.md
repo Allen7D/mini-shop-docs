@@ -13,6 +13,9 @@ hero:
       text: 查看 API 参考
       link: /api/
     - theme: alt
+      text: 部署上线
+      link: /deploy/
+    - theme: alt
       text: GitHub 仓库
       link: https://github.com/Allen7D/mini-shop-server
 
