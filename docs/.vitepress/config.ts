@@ -18,7 +18,6 @@ export default withMermaid({
     // 顶部导航
     nav: [
       { text: '入门指南', link: '/guide/' },
-      { text: '架构', link: '/guide/architecture' },
       { text: '软件工程启示', link: '/guide/engineering' },
       { text: 'API 参考', link: '/api/' },
       { text: 'GitHub', link: 'https://github.com/Allen7D/mini-shop-server' },
