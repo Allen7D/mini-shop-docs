@@ -41,6 +41,7 @@ export default defineConfig({
             { text: '数据层 Model / DAO', link: '/guide/data-layer' },
             { text: '实战拆解·下单流程', link: '/guide/case-order' },
             { text: '动手·添加新接口', link: '/guide/practice' },
+            { text: '软件工程启示', link: '/guide/engineering' },
             { text: '下一步怎么学', link: '/guide/next' },
           ],
         },

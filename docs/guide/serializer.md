@@ -152,8 +152,8 @@ def get_group(id):
 - **链式可读**：`query.hide(...).paginate().hide(...)` 一步到位，也支持分页批量操作。
 - **防误改**：`lock_fileds` 锁住业务期字段集合，序列化阶段不会再被意外改动。
 
-::: tip 建议
-这套「hide/append + 自定义 Encoder」是比手写 `to_dict()` 更可维护的方案。想深入理解，可以在 `app/core/db.py` 的 `JSONSerializerMixin` 里打断点，观察一次请求中 `fields` 从「初始化 → hide/append → lock → 序列化」的变化。
+::: tip 能带走的思想
+先想清楚「数据以什么形态出境」，用一个统一的序列化器收口，而不是让每个 Model 各写一个 `to_dict()`、返回前再手动删字段。配合「默认不暴露、需要时显式 hide/append」的策略，敏感字段不易泄漏。任何语言的 API 都能借鉴：序列化独立成层，字段白名单集中控制。
 :::
 
 下一步：[参数校验层](/guide/validator)
