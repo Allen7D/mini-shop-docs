@@ -152,11 +152,6 @@ def get_group(id):
 - **链式可读**：`query.hide(...).paginate().hide(...)` 一步到位，也支持分页批量操作。
 - **防误改**：`lock_fileds` 锁住业务期字段集合，序列化阶段不会再被意外改动。
 
-## 值得商榷的点
-
-- **序列化失败统一 `raise ServerError()`**：遇到无法序列化的对象会作为「业务错误」抛出，掩盖了真实的类型问题。更合适的是抛带明确信息的类型错误，便于排查。
-- **datetime 固定 `%Y-%m-%dT%H:%M:%SZ`**：无时区转换，`Z` 代表 UTC，但服务器本地是 CST，存在时区偏差隐患（不过 `__getitem__` 里时间字段已经转成了 `%Y-%m-%d %H:%M:%S` 本地格式，所以影响有限）。
-
 ::: tip 建议
 这套「hide/append + 自定义 Encoder」是比手写 `to_dict()` 更可维护的方案。想深入理解，可以在 `app/core/db.py` 的 `JSONSerializerMixin` 里打断点，观察一次请求中 `fields` 从「初始化 → hide/append → lock → 序列化」的变化。
 :::
