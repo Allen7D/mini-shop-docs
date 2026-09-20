@@ -28,12 +28,17 @@ export default withMermaid({
     sidebar: {
       '/guide/': [
         {
-          text: '入门指南',
+          text: '理解',
           items: [
             { text: '这是什么项目', link: '/guide/' },
             { text: '快速启动', link: '/guide/quickstart' },
             { text: '目录结构', link: '/guide/structure' },
             { text: '架构总览', link: '/guide/architecture' },
+          ],
+        },
+        {
+          text: '拆解',
+          items: [
             { text: '核心·红图 Redprint', link: '/guide/redprint' },
             { text: '一次请求的生命周期', link: '/guide/request' },
             { text: '统一异常与响应格式', link: '/guide/response' },
@@ -41,8 +46,19 @@ export default withMermaid({
             { text: '参数校验层', link: '/guide/validator' },
             { text: '权限认证 Token', link: '/guide/auth' },
             { text: '数据层 Model / DAO', link: '/guide/data-layer' },
+          ],
+        },
+        {
+          text: '动手',
+          items: [
             { text: '实战拆解·下单流程', link: '/guide/case-order' },
             { text: '动手·添加新接口', link: '/guide/practice' },
+          ],
+        },
+        {
+          text: '回顾',
+          items: [
+            { text: '软件工程启示', link: '/engineering' },
             { text: '下一步怎么学', link: '/guide/next' },
           ],
         },
