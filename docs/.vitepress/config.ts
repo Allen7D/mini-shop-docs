@@ -60,6 +60,7 @@ export default withMermaid({
             { text: '参数校验层', link: '/guide/validator' },
             { text: '权限认证 Token', link: '/guide/auth' },
             { text: '数据层 Model / DAO', link: '/guide/data-layer' },
+            { text: '文件上传与静态资源', link: '/guide/upload' },
           ],
         },
         {
