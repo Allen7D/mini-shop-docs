@@ -4,6 +4,31 @@
 
 ## 六个阶段
 
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as 小程序客户端
+    participant R as 路由(红图/蓝图)
+    participant A as 认证壳
+    participant V as 校验壳
+    participant S as Service 业务
+    participant D as DAO / Model
+    participant DB as PostgreSQL
+    C->>R: GET /v1/order?page=1&size=10
+    R->>A: 命中 get_order_list
+    A->>R: @auth.login_required 校验Token → g.user
+    A-->>A: 失败 → TokenException(401)
+    R->>V: PaginateValidator()
+    V-->>V: 非法 → ParameterException(400)
+    V->>S: page, size
+    S->>D: OrderDao.get_summary_by_user(uid,page,size)
+    D->>DB: SQLAlchemy 查询 order 表
+    DB-->>D: 结果集
+    D-->>S: paged_orders
+    S-->>R: Success(paged_orders)
+    R-->>C: {error_code, msg, data}
+```
+
 ### ① 路由匹配
 Redprint + Blueprint 命中 `app/api/v1/order.py` 的 `get_order_list`
 

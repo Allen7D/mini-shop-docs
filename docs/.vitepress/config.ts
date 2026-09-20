@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // 部署在 GitHub Pages 的子路径 /mini-shop-docs/ 下
 const base = '/mini-shop-docs/'
 
-export default defineConfig({
+export default withMermaid({
   lang: 'zh-CN',
   title: 'mini-shop-server 文档',
   description: '基于 Flask 的微信小程序商城后端 · 架构与开发文档',
