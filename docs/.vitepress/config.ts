@@ -27,6 +27,7 @@ export default defineConfig({
           items: [
             { text: '这是什么项目', link: '/guide/' },
             { text: '目录结构', link: '/guide/structure' },
+            { text: '架构总览', link: '/guide/architecture' },
             { text: '核心·红图 Redprint', link: '/guide/redprint' },
             { text: '一次请求的生命周期', link: '/guide/request' },
             { text: '统一异常与响应格式', link: '/guide/response' },
