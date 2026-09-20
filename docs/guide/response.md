@@ -59,4 +59,4 @@ class Success(APIException):
 
 同一个 `Success` 类，通过 `error_code` 参数自动切换 HTTP 状态码（200/201/202），代码优雅又简洁。
 
-下一步：[参数校验层](/guide/validator)
+下一步：[统一的 JSON 序列化器](/guide/serializer)

@@ -35,6 +35,7 @@ export default defineConfig({
             { text: '核心·红图 Redprint', link: '/guide/redprint' },
             { text: '一次请求的生命周期', link: '/guide/request' },
             { text: '统一异常与响应格式', link: '/guide/response' },
+            { text: '统一的 JSON 序列化器', link: '/guide/serializer' },
             { text: '参数校验层', link: '/guide/validator' },
             { text: '权限认证 Token', link: '/guide/auth' },
             { text: '数据层 Model / DAO', link: '/guide/data-layer' },
