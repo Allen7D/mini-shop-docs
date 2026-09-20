@@ -138,5 +138,5 @@ $ uv run python fake.py
 ```
 
 ::: tip 下一步
-项目已经跑起来了，接下来看 [目录结构](/guide/structure) 了解代码怎么组织的。
+项目已能正常启动，接下来看 [目录结构](/guide/structure) 了解代码怎么组织的。
 :::

@@ -34,7 +34,9 @@ def get_order_list():
 :::
 
 ::: tip 能带走的思想
-授权(authorization)下沉到装饰器壳，业务代码零侵入。**横切关注点(cross-cutting concern)**——认证、缓存、日志、限流——都适合这种处理：一个装饰器/中间件解决所有接口的共性问题，而不是每个接口重复写。加上 route_meta 的「接口级权限元数据登记」，本质是 RBAC 的落地。
+授权(authorization)下沉到装饰器壳，业务代码零侵入。
+
+**横切关注点(cross-cutting concern)**——认证、缓存、日志、限流——都适合这种处理：一个装饰器/中间件解决所有接口的共性问题，而不是每个接口重复写。加上 route_meta 的「接口级权限元数据登记」，本质是 RBAC 的落地。
 :::
 
 下一步：[数据层 Model / DAO](/guide/data-layer)

@@ -52,7 +52,7 @@ export default withMermaid({
         {
           text: '拆解',
           items: [
-            { text: '核心·红图 Redprint', link: '/guide/redprint' },
+            { text: '红图 Redprint', link: '/guide/redprint' },
             { text: '一次请求的生命周期', link: '/guide/request' },
             { text: '统一异常与响应格式', link: '/guide/response' },
             { text: '统一的 JSON 序列化器', link: '/guide/serializer' },

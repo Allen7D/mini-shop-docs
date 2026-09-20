@@ -1,6 +1,6 @@
 # 目录结构全解
 
-记住一句口诀：**「接口去 api，逻辑去 service，查库去 dao，数据去 models，校验去 validators，工具去 libs」**。
+**接口在 api，业务在 service，查询在 dao，模型在 models，校验在 validators，工具在 libs**。
 
 ## 核心目录一览
 
@@ -44,4 +44,4 @@ def create_app():
 现在的确容易在 `app/libs` 和 `app/core` 之间犯晕。`libs` 是「与框架无关的工具」（错误码、枚举、http 工具），`core` 是「和 Flask 强绑定的核心」（db 连接、认证、红图、异常）。
 :::
 
-下一步：[核心·红图 Redprint](/guide/redprint)
+下一步：[红图 Redprint](/guide/redprint)

@@ -1,6 +1,6 @@
 # 架构总览
 
-mini-shop-server 采用 **分层 + AOP（面向切面）** 架构。这是全项目的灵魂，理解了它，整个项目就通了。
+mini-shop-server 采用 **分层 + AOP（面向切面）** 架构。这是全项目的主线，理解了它，就能读懂大部分代码。
 
 ## 分层调用链
 
@@ -29,7 +29,7 @@ mini-shop-server 采用 **分层 + AOP（面向切面）** 架构。这是全项
 
 比 Flask 原生蓝图更灵活：先「收集」路由，再统一「注册」，配合 `RedprintAssigner` 自由组合到对应版本蓝图。
 
-详见：[核心·红图 Redprint](/guide/redprint)
+详见：[红图 Redprint](/guide/redprint)
 
 ### 2. AOP —— 横切关注点抽离
 
