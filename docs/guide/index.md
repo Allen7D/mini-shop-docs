@@ -28,4 +28,4 @@
 打开 `app/__init__.py`，这是全项目的总入口（工厂函数 `create_app()`），一行行读注释，你会看到项目是怎么组装起来的。
 :::
 
-下一步：[目录结构全解](/guide/structure)
+下一步：[快速启动](/guide/quickstart)

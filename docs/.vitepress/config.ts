@@ -9,6 +9,9 @@ export default defineConfig({
   description: '基于 Flask 的微信小程序商城后端 · 架构与开发文档',
   base,
 
+  // 忽略指向 localhost 的本地服务链接（如 Swagger 文档地址）
+  ignoreDeadLinks: [/^https?:\/\/localhost/],
+
   // 侧边栏 / 导航结构
   themeConfig: {
     // 顶部导航
@@ -26,6 +29,7 @@ export default defineConfig({
           text: '入门指南',
           items: [
             { text: '这是什么项目', link: '/guide/' },
+            { text: '快速启动', link: '/guide/quickstart' },
             { text: '目录结构', link: '/guide/structure' },
             { text: '架构总览', link: '/guide/architecture' },
             { text: '核心·红图 Redprint', link: '/guide/redprint' },
