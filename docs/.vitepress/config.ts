@@ -54,6 +54,7 @@ export default withMermaid({
       { text: '入门指南', link: '/guide/' },
       { text: '软件工程启示', link: '/guide/engineering' },
       { text: 'API 参考', link: '/api/' },
+      { text: '调试篇', link: '/debug/' },
       { text: '部署篇', link: '/deploy/' },
       { text: 'GitHub', link: 'https://github.com/Allen7D/mini-shop-server' },
     ],
@@ -113,6 +114,15 @@ export default withMermaid({
           text: '部署篇',
           items: [
             { text: '服务器部署（Nginx + Gunicorn）', link: '/deploy/' },
+          ],
+        },
+      ],
+      '/debug/': [
+        {
+          text: '调试篇',
+          items: [
+            { text: 'VSCode 调试配置', link: '/debug/' },
+            { text: '调试技巧', link: '/debug/techniques' },
           ],
         },
       ],
